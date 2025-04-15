@@ -1,0 +1,57 @@
+<!-- kaydigoruntule.html -->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <style>
+        body {
+          background-color: #fff8e1;
+          font-family: 'Georgia', serif;
+          color: #4e342e;
+          text-align: center;
+          padding: 30px;
+        }
+        h1 {
+          color: #6a1b9a;
+          font-size: 36px;
+        }
+        ul {
+          list-style-type: none;
+          padding: 0;
+        }
+        li {
+          margin: 10px 0;
+        }
+        a {
+          text-decoration: none;
+          color: #00897b;
+          font-weight: bold;
+          font-size: 18px;
+        }
+        a:hover {
+          color: #004d40;
+        }
+        p {
+          font-size: 18px;
+        }
+      </style>
+  <meta charset="UTF-8">
+  <title>Kayıt Bilgileri</title>
+</head>
+<body>
+  <h2>Kayıt Başarılı!</h2>
+  <p><strong>Kullanıcı Adı:</strong> <span id="kullanici"></span></p>
+  <p><strong>Şifre:</strong> <span id="sifre"></span></p>
+  <p><strong>Doğum Tarihi:</strong> <span id="dogum"></span></p>
+  <p><strong>Telefon:</strong> <span id="telefon"></span></p>
+
+  <p style="text-align:center; margin-top:40px;"><a href="../index.html">⬅ Anasayfaya Dön</a></p>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("kullanici").textContent = params.get("kullanici");
+    document.getElementById("sifre").textContent = params.get("sifre");
+    document.getElementById("dogum").textContent = params.get("dogum");
+    document.getElementById("telefon").textContent = params.get("telefon");
+  </script>
+</body>
+</html>

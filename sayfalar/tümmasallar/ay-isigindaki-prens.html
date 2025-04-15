@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ay Işığındaki Prens</title>
+ 
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+
+  <style>
+    p {
+    font-size: xx-large;
+    font-family: 'Uncial Antiqua', cursive;
+  }
+
+    body {
+      background-color: #fff8e1;
+      font-family: 'Georgia', serif;
+      color: #4e342e;
+      padding: 30px;
+    }
+    h1 {
+      color: #6a1b9a;
+      text-align: center;
+    }
+    .masal {
+      border: 2px dashed #6a1b9a;
+      border-radius: 10px;
+      margin: 20px auto;
+      padding: 20px;
+      width: 80%;
+      background-color: #fce4ec;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    .yorumlar {
+      margin-top: 40px;
+    }
+    .yorumlar textarea {
+      width: 100%;
+      height: 100px;
+      border: 1px solid #6a1b9a;
+      border-radius: 10px;
+      padding: 10px;
+    }
+    .yorumlar button {
+      background-color: #6a1b9a;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .yorumlar button:hover {
+      background-color: #9c27b0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Ay Işığındaki Prens</h1>
+
+  <div class="masal">
+    <p>Bir zamanlar uzak bir krallıkta, her gece ay ışığıyla canlanan bir prens yaşardı...</p>
+    <img src="../tümmasallar/prens.jpg" alt="prsn">
+    <p>Bir varmış bir yokmuş, uzak bir diyarın en yüksek tepelerinden birinde, yalnız bir prens yaşarmış. Adı Ayhan olan bu prens, babasından krallığı devralmak yerine, ay ışığının peşinden gitmeyi, geceleri gökyüzünde parlayan ayın ışıltısına hayran kalmayı tercih edermiş.
+
+      Bir akşam, Ayhan bir yıldızın kayıp düşüşünü görür. Gözleri büyür, kalbi hızla çarpmaya başlar. O an içindeki gizemli bir his, onu ay ışığının kaynağını aramaya sürükler. Prens, gece boyunca dağları, vadileri, denizleri geçer ve nihayetinde büyük bir ormanın derinliklerinde, ay ışığının yansıdığı bir göletin kenarına ulaşır.
+      
+      Bu göletin ortasında, suyun üzerinde parıldayan bir gölge vardır. Prens, dikkatlice yaklaşır ve suyun dibine bakarken, orada bir su perisiyle karşılaşır. Peri, Ayhan’a gülümseyerek şöyle der:
+      
+      “Sen, gökyüzünün ışığının peşinden gelen tek insansın. Ama sana bir sır vermek isterim. Ay ışığı, sevgi ve huzurun simgesidir. Onu sadece kalbinde iyilik ve saf sevgi taşıyanlar görebilir.”
+      
+      Peri, parıldayan elini suya daldırır ve birden göletin suyu parlamaya başlar. Su, yıldızlar gibi pırıl pırıl olur ve bir anda Ayhan, ay ışığının kaynağını görebileceği bir yere ulaşır. Orada, sadece ay ışığını görmekle kalmaz, aynı zamanda kendisinin içindeki gerçek huzuru da keşfeder.
+      
+      Peri, Ayhan’a son bir öğüt verir:
+      
+      “Senin krallığın, sadece toprakla değil, insanlarının kalpleriyle de yönetilir. Gerçek ışık, dış dünyadan değil, iç dünyandan gelir. Sen de bunu bulduğunda, halkını aydınlatırsın.”
+      
+      Prens, periyle vedalaşır ve geri dönerek krallığına döner. Fakat artık eski gibi değildir. İçindeki huzuru, sevgiyi ve bilgeliği bulmuş, halkına neşe ve iyilik getirmek için hazırdır. Krallığını barışla yönetir, adaletle hükmeder ve en önemlisi, kalbinde taşıdığı ışığı herkese ulaştırır.
+      
+      Ve o günden sonra, her gece gökyüzündeki ay ışığına bakarken, Prens Ayhan, gerçek ışığın içindeki sevgiden geldiğini bilir.
+      
+      Ve masal burada biter.</p>
+    <img src="../tümmasallar/moon.jpg" alt="mon">
+   
+    <p>Masalın devamı burada olacak. Burada görsellerle desteklenecek ve masal tamamlanacak...</p>
+   
+   
+  </div>
+
+  <div class="yorumlar">
+    <h3>Yorum Yap</h3>
+    <textarea id="yorumInput" placeholder="Yorumunuzu buraya yazın..."></textarea>
+    <br>
+    <button onclick="yorumEkle()">Yorum Gönder</button>
+  </div>
+  <div id="yorumListesi">
+    <h3>Yorumlar</h3>
+  </div>
+  
+  <script>
+    function yorumEkle() {
+      var yorum = document.getElementById("yorumInput").value;
+  
+      if (yorum.trim() !== "") {
+        var yorumKutusu = document.createElement("p");
+        yorumKutusu.textContent = yorum;
+  
+        document.getElementById("yorumListesi").appendChild(yorumKutusu);
+  
+        // Yorum kutusunu temizle
+        document.getElementById("yorumInput").value = "";
+      } else {
+        alert("Yorum boş olamaz!");
+      }
+    }
+  </script>
+
+  <p style="text-align:center; margin-top:40px;"><a href="../masallar.html">⬅ Masallar Sayfasına Dön</a></p>
+
+
+
+</body>
+<style>
+  .img{
+  display: inline-block;
+  
+  }
+  .masal{
+    text-align: center;
+
+  }
+  
+  </style>
+</html>
